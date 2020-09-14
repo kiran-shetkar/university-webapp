@@ -1,0 +1,17 @@
+<h4>
+    University Details
+    <button (click)="addCollege()" class="btn btn-primary float-right">Add College</button>
+<hr>
+
+<div *ngIf="university">
+    <div>
+        <label><b>Name: </b></label> {{university.name}}
+    </div>
+
+    <div>
+        <label><b>Establishment Date: </b></label> {{university.establishmentDate}}
+    </div>
+</div>
+
+<br>
+<button (click)="list()" class="btn btn-primary">Back to University List</button>

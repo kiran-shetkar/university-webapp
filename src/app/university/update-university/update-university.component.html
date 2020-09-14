@@ -1,0 +1,23 @@
+<h4>Update University</h4>
+<hr>
+<div [hidden]="submitted" style="width: 400px;">
+    <form (ngSubmit)="onsubmit()">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" required [(ngModel)]="university.name" name="name">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Establishment Date</label>
+            <input type="text" class="form-control" id="establishmentDate" required
+                [(ngModel)]="university.establishmentDate" name="establishmentDate">
+        </div>
+        <button type="reset" (click)="cancle()" class="btn btn-secondary">Cancel</button>
+        &nbsp; &nbsp;
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<div [hidden]="!submitted">
+    <h4>University details updated successfully!</h4>
+</div>
