@@ -9,12 +9,13 @@ import { UniversityService } from '../university.service';
   styleUrls: ['./create-university.component.css']
 })
 export class CreateUniversityComponent implements OnInit {
-  submitted =false;
-  university: University = new University();
+  submitted:boolean;
+  university: University;
 
   constructor(private service: UniversityService, private router: Router) { }
 
   ngOnInit(): void {
+    this.reset();
   }
 
   reset(): void {

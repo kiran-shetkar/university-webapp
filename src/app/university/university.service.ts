@@ -7,16 +7,9 @@ import { University } from './university';
   providedIn: 'root'
 })
 export class UniversityService {
-
-
-
-
-
-  private baseApiUrl = 'http://localhost:8080/universities';
+  private baseApiUrl = 'http://localhost:8080/api/universities';
 
   constructor(private http: HttpClient) { }
-
-
 
   create(university: Object): Observable<Object> {
     const url = `${this.baseApiUrl}`;

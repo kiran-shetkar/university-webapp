@@ -1,0 +1,35 @@
+<h4>
+    College List
+    <button (click)="addCollege()" class="btn btn-primary float-right">Add College</button>
+</h4>
+
+<div class="panel panel-primary">
+    <div class="panel-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Sl. No</th>
+                    <th>Name</th>
+                    <th>Establishment Date</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let college of colleges; let i = index">
+                    <td>{{i+1}}</td>
+                    <td>{{college.name}}</td>
+                    <td>{{college.establishmentDate}}</td>
+                    <td class="float-right">
+                        <button (click)="deleteCollege(college.id)" class="btn btn-danger">Delete</button>
+
+                        <button (click)="updateCollege(college.id)" class="btn btn-dark"
+                            style="margin-left: 10px">Update</button>
+
+                        <button (click)="collegeDetails(college.id)" class="btn btn-info"
+                            style="margin-left: 10px">Details</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

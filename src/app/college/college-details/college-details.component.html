@@ -1,0 +1,17 @@
+<h4>
+    College Details
+</h4>
+<hr>
+
+<div *ngIf="college">
+    <div>
+        <label><b>Name: </b></label> {{college.name}}
+    </div>
+
+    <div>
+        <label><b>Establishment Date: </b></label> {{college.establishmentDate}}
+    </div>
+</div>
+
+<br>
+<button (click)="list()" class="btn btn-primary">Back to College List</button>

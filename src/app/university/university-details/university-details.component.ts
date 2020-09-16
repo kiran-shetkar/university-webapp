@@ -14,11 +14,15 @@ export class UniversityDetailsComponent implements OnInit {
   university: University;
   id: Number;
 
-  constructor(private route: Router, private router: ActivatedRoute,
-    private service: UniversityService, private dateUtils: DateUtilsService) { }
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private router: Router, 
+    private service: UniversityService, 
+    private dateUtils: DateUtilsService
+  ) { }
 
   ngOnInit(): void {
-    this.id = this.router.snapshot.params['id'];
+    this.id = this.activatedRoute.snapshot.params['id'];
     this.university = new University();
     this.getUniversityDetail();
   }
@@ -30,11 +34,11 @@ export class UniversityDetailsComponent implements OnInit {
     }, error => console.log(error));
   }
 
-  addCollege() {
-    this.route.navigate(['/universities/'+this.id+'/colleges/create']);
+  viewColleges() {
+    this.router.navigate(['/universities/'+this.id+'/colleges']);
   }
 
   list() {
-    this.route.navigate(['/universities']);
+    this.router.navigate(['/universities']);
   }
 }

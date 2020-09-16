@@ -1,6 +1,5 @@
-<p>Create College</p>
+<h4>Update College</h4>
 <hr>
-
 <div [hidden]="submitted" style="width: 400px;">
     <form (ngSubmit)="onsubmit()">
         <div class="form-group">
@@ -13,13 +12,12 @@
             <input type="text" class="form-control" id="establishmentDate" required
                 [(ngModel)]="college.establishmentDate" name="establishmentDate">
         </div>
-
-        <button type="reset" (click)="reset()" class="btn btn-warning">Reset</button>
+        <button type="reset" (click)="cancle()" class="btn btn-default">Cancel</button>
         &nbsp; &nbsp;
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>
 
 <div [hidden]="!submitted">
-    <h4>You submitted successfully!</h4>
+    <h4>College details updated successfully!</h4>
 </div>

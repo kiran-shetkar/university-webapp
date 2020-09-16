@@ -16,13 +16,13 @@ export class UpdateUniversityComponent implements OnInit {
 
   constructor(
     private service: UniversityService, 
-    private router: ActivatedRoute, 
-    private route: Router,
+    private activatedRoute: ActivatedRoute, 
+    private router: Router,
     private dateUtils: DateUtilsService
   ) { }
 
   ngOnInit(): void {
-    this.id = this.router.snapshot.params['id'];
+    this.id = this.activatedRoute.snapshot.params['id'];
     this.university = new University();
     this.getUniversityDetail();
   }
@@ -49,11 +49,11 @@ export class UpdateUniversityComponent implements OnInit {
   }
 
   gotoUniversityDetails() {
-    this.route.navigate(['/universities/details', this.id]);
+    this.router.navigate(['/universities/details', this.id]);
   }
 
   cancle() {
-    this.route.navigate(['/universities']);
+    this.router.navigate(['/universities']);
   }
 
   async delay(ms: number) {
