@@ -19,6 +19,7 @@ export class UniversityListComponent implements OnInit {
     this.retrieveAll();
   }
 
+  
   retrieveAll() {
     this.service.retrieveAll().subscribe(data => {
       this.universities = data;

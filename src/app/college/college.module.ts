@@ -2,19 +2,20 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 
-import { CreateCollegeComponent } from './create-college/create-college.component';
+import { CollegeRoutingModule } from './college-routing.module'
+
 import { CollegeListComponent } from './college-list/college-list.component';
+import { CreateCollegeComponent } from './create-college/create-college.component';
 import { CollegeDetailsComponent } from './college-details/college-details.component';
 import { UpdateCollegeComponent } from './update-college/update-college.component';
 
-
-
 @NgModule({
-  declarations: [CreateCollegeComponent, CollegeListComponent, CollegeDetailsComponent, UpdateCollegeComponent],
+  declarations: [CollegeListComponent, CreateCollegeComponent, CollegeDetailsComponent, UpdateCollegeComponent],
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CollegeRoutingModule
   ],
   providers: []
 })

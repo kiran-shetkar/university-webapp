@@ -7,8 +7,6 @@ import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { UniversityModule } from './university/university.module';
-import { CollegeModule } from './college/college.module';
 @NgModule({
   declarations: [
     AppComponent
@@ -19,9 +17,7 @@ import { CollegeModule } from './college/college.module';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule,
-    UniversityModule,
-    CollegeModule
+    AppRoutingModule
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]
